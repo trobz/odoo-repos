@@ -38,11 +38,15 @@ select = [
 ignore = [
     # DoNotAssignLambda
     "E731",
+    # one user-facing Error type carries its message
+    "TRY003",
 ]
 extend-safe-fixes = ["UP008"]
 
 [lint.per-file-ignores]
 "tests/*" = ["S101"]
+# urllib only opens our https constants or the ODOO_REPOS_INDEX_URL override
+"odoo_repos/{ops,index}.py" = ["S310"]
 
 [format]
 preview = true
