@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v1.6.1
+_src_path: /home/xavie/code/trobz/trobz-python-template
+author_email: doanhduyxavie@gmail.com
+author_username: xaviedoanhduy
+enable_docs_site: false
+enable_github_action: true
+package_name: odoo_repos
+project_description: Clone and keep Odoo/OCA repositories up to date, with worktree
+    support, a TUI and a systemd timer.
+project_name: odoo-repos
+project_type: cli
+publish_to_pypi: false
+repository_name: odoo-repos
+repository_namespace: trobz
