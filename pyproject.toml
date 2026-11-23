@@ -9,6 +9,8 @@ license = "AGPL-3.0"
 license-files = ["LICENSE"]
 
 dependencies = [
+    "textual>=8.2.8",
+    "tomlkit>=0.15.2",
     "typer>=0.20",
 ]
 
@@ -16,6 +18,7 @@ dependencies = [
 Repository = "https://github.com/trobz/odoo-repos"
 [project.scripts]
 odoo-repos = "odoo_repos.main:app"
+ors = "odoo_repos.main:app"
 
 [dependency-groups]
 dev = [

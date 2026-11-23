@@ -13,7 +13,12 @@
 ## Entry Points
 
 
-- `odoo_repos/main.py` — CLI entry point
+- `odoo_repos/main.py` — CLI entry point (Typer)
+- `odoo_repos/tui.py` — Textual TUI, calls the same functions as the CLI
+- `odoo_repos/config.py` — `odoo-repos.toml` (tomlkit), validation, checkouts
+- `odoo_repos/ops.py` — clone, fetch, fast-forward, status, lock, GraphQL check
+- `odoo_repos/index.py` — module index and repository lists, module resolution
+- `odoo_repos/timer.py` — systemd user units
 
 
 ## Commands
@@ -33,4 +38,5 @@ make test      # Run pytest
 - `pyproject.toml` — Dependencies and build config
 - `ruff.toml` — Linter/formatter rules
 
-- `tests/` — Test suite (pytest)
+- `tests/` — Test suite (pytest); `conftest.py` fakes GitHub with local bare repos
+- `docs/configuration.md` — `odoo-repos.toml` reference

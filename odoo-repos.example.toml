@@ -1,0 +1,33 @@
+# odoo-repos configuration. Copy to ~/code/odoo-repos.toml and edit.
+# Checkouts live next to this file: <org>/<repo>/<version>.
+# Every key: docs/configuration.md
+
+# Versions cloned for every repository that does not list its own.
+versions = ["18.0", "17.0"]
+
+# Parallel git processes; `-j N` wins.
+jobs = 16
+
+# Large repositories cloned once as a blobless base, plus one worktree per version.
+worktree = ["odoo/odoo", "odoo/enterprise"]
+
+[repos]
+odoo = [
+  "odoo",
+  # "enterprise",  # needs SSH access to github.com/odoo/enterprise
+]
+oca = [
+  "web",
+  "server-tools",
+  "server-ux",
+  "queue",
+  ["sale-workflow", ["18.0"]],  # only 18.0
+]
+
+[transport]
+default = "https"
+"odoo/enterprise" = "ssh"
+
+# Extra remotes next to origin: fetched for the versions above, never merged.
+# [remotes]
+# "odoo/odoo" = { ocb = "https://github.com/oca/ocb.git" }
